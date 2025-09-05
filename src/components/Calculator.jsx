@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Calculator() {
-   const ope=['1','2','3','4','5','6','7','8','9','0','00','.','+','-','*','/','Calc','Clear'];
+   const ope=['1','2','3','4','5','6','7','8','9','0','00','.','+','-','*','/','Calc','Clear','X'];
    const [value,setValue]=useState('')
      function handleClick(input){
       if(input==='Calc'){
@@ -11,6 +11,8 @@ export default function Calculator() {
         
       }else if(input==='Clear'){
          setValue('')
+      }else if(input ==='X'){
+        setValue(value.slice(0,-1))
       }
       else{
       // console.log(input);
